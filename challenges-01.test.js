@@ -34,10 +34,15 @@ Return the modified array.
 
 const addValues = (arr, value) => {
   // Solution code here...
+  arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
+  for(let i =0; i < times; i++){
+    callback(arr, num);
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -54,10 +59,17 @@ Return the modified array.
 
 const removeOne = (num, arr) => {
   // Solution code here...
+  if(num % 3 === 2){
+    arr.pop();
+  }
 };
 
 const removeElements = (arr, callback) => {
   // Solution code here...
+  for(let i =0; i < arr.length; i++){
+    callback(arr, num);
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -68,7 +80,12 @@ Write a function named removeWithForEach that produces the same output as challe
 
 const removeWithForEach = (arr, callback) => {
   // Solution code here...
+  arr.forEach((item) => {
+    callback(item,arr);
+  });
+  return arr;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -82,6 +99,12 @@ This anonymous function should accept up to three arguments: the element, the in
 
 const removeWithAnon = (arr) => {
   // Solution code here...
+  arr.forEach((element, index, array)) => {
+    if(element % 3 ===2){
+      array.pop();
+    }
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -103,6 +126,13 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   // Solution code here...
+  let newList = [];
+  availableItems.forEach(function(value, index){
+    if(value.available === 'true'){
+      newList.push(value.name);
+    }
+  });
+  return newList;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -121,6 +151,10 @@ Return the resulting output array.
 
 const fizzbuzz = (arr) => {
   // Solution code here...
+  arr.forEach((arr)) => {
+    callback(item,arr);
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -185,3 +219,19 @@ describe('Testing challenge 7', () => {
     expect(fizzbuzz(inputs).length).toStrictEqual(16);
   });
 });
+
+
+let numbers = [5,4,3,7,6,9,10,123,1,4,98];
+
+numbers.forEach( function(value,idx) {
+  if( value % 2 ) { console.log(value); } 5, 3, 7, 9, 123, 1
+});
+
+numbers.forEach( value.idx) => {
+  if( value % 2) { console.log(value)} 5, 3, 7, 9, 123, 1
+});
+
+numbers.forEach(findOdds);
+function findOdds(value, idx) {
+  if( value % 2 ) { console.log(value), } 5, 3, 7, 9, 123, 1
+}
