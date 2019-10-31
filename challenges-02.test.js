@@ -29,7 +29,7 @@ console.log(a) prints [1, 2, 3, 1]
 const appendFirstToLast = (arr) => {
 appendFirstToLast(arr);
 console.log(arr) prints []
-  // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -49,8 +49,7 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 
 const addBirthYearProperty = (obj, year) => {
 addYearBornProperty(year, object);
-console.Console.log() 
-  // Solution code here...
+console.Console.log()
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -70,7 +69,6 @@ const setStatusAsAuthor = (people) => {
   const setStatusAsAuthor = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }];
   people(setStatusAsAuthor);
   console.log(people[1].isAuthor) prints true
-  // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
